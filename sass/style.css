@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  font-family: "sans-serif";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.claro {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+body.claro .container {
+  background-color: #e2e8f0;
+}
+
+body.claro #btn-gerar {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+body.claro #btn-gerar:hover {
+  background-color: #0284c7;
+}
+
+body.claro #toggle-tema {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.container {
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  margin: 1rem;
+}
+
+h1 {
+  color: #38bdf8;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+#frase {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #f1f5f9;
+}
+
+#autor {
+  font-style: italic;
+  color: #f1f5f9;
+  margin-bottom: 2rem;
+}
+
+#btn-gerar {
+  background-color: #38bdf8;
+  color: #0f172a;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+#btn-gerar:hover {
+  background-color: #0ea5e9;
+  transform: scale(1.05);
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#loading {
+  font-size: 1.25rem;
+  color: #f1f5f9;
+  font-style: italic;
+  animation: piscar 1s infinite;
+  margin-bottom: 2rem;
+}
+
+#toggle-tema {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+#toggle-tema:hover {
+  transform: scale(1.05);
+}
+
+@keyframes piscar {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  #frase, #loading {
+    font-size: 1rem;
+  }
+  #btn-gerar {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,86 @@
+h1 {
+  color: $cor-titulo;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+#frase {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: $cor-texto;
+}
+
+#autor {
+  font-style: italic;
+  color: $cor-texto;
+  margin-bottom: 2rem;
+}
+
+#btn-gerar {
+  background-color: $cor-botao;
+  color: $cor-fundo;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: $cor-botao-hover;
+    transform: scale(1.05);
+  }
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#loading {
+  font-size: 1.25rem;
+  color: $cor-texto;
+  font-style: italic;
+  animation: piscar 1s infinite;
+  margin-bottom: 2rem;
+}
+
+#toggle-tema {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: $cor-botao;
+    color: $cor-fundo;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+    
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+
+@keyframes piscar {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #frase, #loading {
+    font-size: 1rem;
+  }
+
+  #btn-gerar {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
